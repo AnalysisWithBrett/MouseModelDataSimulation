@@ -1,7 +1,5 @@
 #Simulation for mice project
 rm(list=ls())
-# Set your working directory
-setwd("C:\\Users\\hoybr\\Documents\\coding tutorial\\dissertation")   
 
 #Library
 library(dplyr)
@@ -16,7 +14,6 @@ library(MASS)
 library(broom)
 
 #Importing data
-mice <- read.csv("simulation.csv", header = TRUE) #ignore this, as you do not have the same working directory
 mice <- read.table(file.choose(), stringsAsFactors = TRUE, header=TRUE) #use this
 
 
@@ -521,28 +518,6 @@ anova(linearmodconc)
 anova(quadraticmodconc)
 anova(quadraticmodbc)
 
-
-
-
-
-
-
-
-
-
-
-
-
-#Creating excel sheet for dataframe
-
-install.packages("writexl")
-library(writexl)
-library(openxlsx)
-write_xlsx(mice, "C:\\tiree.sms.ed.ac.uk\home\s1978208\ecology projectpeople.xlsx")
-write.xlsx(mice, 'mice.xlsx')
-write.xlsx(mice, read_excel("M:/ecology project/simulation.xlsx"), sheetName="mice")
-write_xlsx(mice, 'C:\\Users\\s1978208\\data.xlsx')
-tempfile<-write_xlsx(mice)
 tempfile
 
 
