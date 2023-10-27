@@ -161,13 +161,7 @@ mice_long <- mice_long %>%
 mice_long %>%
   dplyr::select(concentration, back_log, back_bc)
 
-
-
-
-
-
-
-
+#Checking the datasheet so far
 View(mice_long)
 
 
